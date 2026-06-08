@@ -22,8 +22,10 @@ theme.addEventListener("click", () => {
     }
 });
 reset.addEventListener("click",()=>{
-    userscore.innerHTML=0;
-    comscore.innerHTML=0;
+    user=0;
+    com=0;
+    userscore.innerHTML=user;
+    comscore.innerHTML=com;
     console.log("game reset");
 })
 
