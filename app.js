@@ -26,7 +26,6 @@ reset.addEventListener("click",()=>{
     com=0;
     userscore.innerHTML=user;
     comscore.innerHTML=com;
-    console.log("game reset");
 })
 
 const comchoice=()=>{
@@ -36,32 +35,24 @@ const comchoice=()=>{
 }
 
 const playgame=(id)=>{
-    console.log("user choose=",id);
     const comchoose =comchoice();
-    console.log("computer choice=",comchoose);
     if(id===comchoose){
 
         msg.innerHTML="match draw. try again";
         msg.style.backgroundColor = "gray";
-        console.log("match draw.");
     }
     else if((id=='rock'&& comchoose=='scissor')||(id=='paper'&& comchoose=='rock')||(id =='scissor'&&comchoose=='paper')){
-
-        console.log("user is winner");
         msg.innerHTML="You Win🏆!";
         msg.style.backgroundColor = "green";
         user++;
         userscore.innerHTML=user;
-        console.log(user);
     }
     else
     {
-        console.log("computer is winner");
     msg.innerHTML="you lose";
     msg.style.backgroundColor = "red";
     com++;
     comscore.innerHTML=com;
-    console.log(com);
     }
 }
 
