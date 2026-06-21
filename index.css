@@ -1,0 +1,417 @@
+/* ===== BRUTALIST STYLE - NO SMOOTH, NO GLASS, NO GRADIENTS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    border: 8px solid #2a2a2a;
+}
+
+/* ===== NAVBAR - BRUTAL ===== */
+nav {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: #2a2a2a;
+    border: 4px solid #fff;
+    margin-bottom: 35px;
+    box-shadow: 12px 12px 0 #000;
+}
+
+nav h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 4px solid #ff3366;
+    padding-bottom: 4px;
+}
+
+.theme {
+    background: #1a1a1a;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: none;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.theme:hover {
+    background: #ff3366;
+    color: #fff;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+/* ===== CHOICES - BRUTAL ===== */
+.choice {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.action {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 5px solid #fff;
+    background: #2a2a2a;
+    filter: grayscale(0%);
+    transition: none;
+    box-shadow: 8px 8px 0 #000;
+}
+
+.action:hover {
+    border-color: #ff3366;
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0 #000;
+    filter: grayscale(0%);
+}
+
+.action:active {
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0 #000;
+}
+
+/* ===== SCORE BOARD - BRUTAL ===== */
+.score-board {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 10px 0 25px;
+    padding: 25px 50px;
+    background: #2a2a2a;
+    border: 4px solid #fff;
+    box-shadow: 8px 8px 0 #000;
+}
+
+.score-board > div {
+    text-align: center;
+}
+
+.score-board p {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.score-board div p:last-child {
+    font-size: 0.9rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 6px;
+    border-top: 2px solid #444;
+    padding-top: 6px;
+}
+
+.score-board div:first-child p:first-child {
+    color: #00ff88;
+}
+
+.score-board div:last-child p:first-child {
+    color: #ff3366;
+}
+
+/* ===== MESSAGE BOX - BRUTAL ===== */
+.msg-box {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 20px;
+}
+
+.msg {
+    padding: 16px 50px;
+    background: #2a2a2a;
+    border: 4px solid #fff;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 8px 8px 0 #000;
+    min-width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Brutal message states */
+.msg.win {
+    border-color: #00ff88;
+    color: #00ff88;
+    box-shadow: 8px 8px 0 #003322;
+}
+
+.msg.lose {
+    border-color: #ff3366;
+    color: #ff3366;
+    box-shadow: 8px 8px 0 #330011;
+}
+
+.msg.draw {
+    border-color: #ffd700;
+    color: #ffd700;
+    box-shadow: 8px 8px 0 #332200;
+}
+
+/* ===== RESET BUTTON - BRUTAL ===== */
+.reset {
+    display: block;
+    margin: 8px auto 0;
+    padding: 14px 50px;
+    background: #1a1a1a;
+    border: 4px solid #fff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 8px 8px 0 #000;
+    transition: none;
+}
+
+.reset:hover {
+    background: #ff3366;
+    border-color: #ff3366;
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0 #000;
+}
+
+.reset:active {
+    transform: translate(8px, 8px);
+    box-shadow: 0px 0px 0 #000;
+}
+
+
+/* ===== DARK THEME (Default) ===== */
+body {
+    background: #1a1a1a;
+    transition: background 0.3s ease;
+}
+
+/* ===== LIGHT THEME (Toggle) ===== */
+body.dark {
+    background: #f0f0f0;
+}
+
+body.dark nav {
+    background: #ffffff;
+    border-color: #1a1a1a;
+    box-shadow: 8px 8px 0 #000;
+}
+
+body.dark nav h1 {
+    color: #1a1a1a;
+    border-bottom-color: #ff3366;
+}
+
+body.dark .theme {
+    background: #f0f0f0;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+    box-shadow: 4px 4px 0 #000;
+}
+
+body.dark .theme:hover {
+    background: #ff3366;
+    color: #fff;
+}
+
+body.dark .score-board {
+    background: #ffffff;
+    border-color: #1a1a1a;
+    box-shadow: 8px 8px 0 #000;
+}
+
+body.dark .score-board p {
+    color: #1a1a1a;
+}
+
+body.dark .score-board div p:last-child {
+    color: #666;
+    border-top-color: #ccc;
+}
+
+body.dark .msg {
+    background: #ffffff;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+    box-shadow: 8px 8px 0 #000;
+}
+
+body.dark .msg.win {
+    border-color: #00cc77;
+    color: #00cc77;
+    box-shadow: 8px 8px 0 #003322;
+}
+
+body.dark .msg.lose {
+    border-color: #ff3366;
+    color: #ff3366;
+    box-shadow: 8px 8px 0 #330011;
+}
+
+body.dark .msg.draw {
+    border-color: #ccaa00;
+    color: #ccaa00;
+    box-shadow: 8px 8px 0 #332200;
+}
+
+body.dark .reset {
+    background: #f0f0f0;
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+    box-shadow: 8px 8px 0 #000;
+}
+
+body.dark .reset:hover {
+    background: #ff3366;
+    border-color: #ff3366;
+    color: #fff;
+}
+
+body.dark .action {
+    border-color: #1a1a1a;
+    box-shadow: 8px 8px 0 #000;
+}
+
+body.dark .action:hover {
+    border-color: #ff3366;
+}
+
+body.dark .choice {
+    /* no change */
+}
+
+body.dark .score-board div:first-child p:first-child {
+    color: #00cc77;
+}
+
+body.dark .score-board div:last-child p:first-child {
+    color: #ff3366;
+}
+
+/* ===== RESPONSIVE - BRUTAL ===== */
+@media (max-width: 600px) {
+    .action {
+        width: 95px;
+        height: 95px;
+    }
+
+    .choice {
+        gap: 15px;
+    }
+
+    .score-board {
+        gap: 30px;
+        padding: 18px 25px;
+    }
+
+    .score-board p {
+        font-size: 2.5rem;
+    }
+
+    nav h1 {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 12px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .msg {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 140px;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .reset {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .theme {
+        font-size: 1rem;
+        padding: 4px 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .action {
+        width: 75px;
+        height: 75px;
+        border-width: 4px;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .choice {
+        gap: 10px;
+    }
+
+    .score-board {
+        gap: 20px;
+        padding: 12px 16px;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .score-board p {
+        font-size: 2rem;
+    }
+
+    nav h1 {
+        font-size: 0.8rem;
+    }
+
+    nav {
+        padding: 10px 12px;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .msg {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        min-width: 100px;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .reset {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        box-shadow: 6px 6px 0 #000;
+    }
+
+    .theme {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+    }
+}
