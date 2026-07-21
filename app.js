@@ -27,7 +27,7 @@ reset.addEventListener("click", () => {
     userscore.innerHTML = user;
     comscore.innerHTML = com;
     msg.innerHTML = "Play your move";
-    msg.className = "msg"; // Remove all extra classes
+    msg.className = "msg"; 
 });
 
 // ===== COMPUTER CHOICE =====
